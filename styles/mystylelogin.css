@@ -23,7 +23,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
-#topo p{
+#topo a{
     margin-inline-start: 30px;
     margin-inline-end: 30px;
     margin-top: 10px;
@@ -37,7 +37,7 @@ body{
     justify-items: center;
     flex-direction: column;
     width: 550px;
-    height: 350px;
+    height: 350vh;
     background-color: blue;
 }
 #login p{

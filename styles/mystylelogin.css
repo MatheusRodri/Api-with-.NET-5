@@ -27,6 +27,7 @@ body{
     margin-inline-start: 30px;
     margin-inline-end: 30px;
     margin-top: 10px;
+    color: black;
 }
 #logo {
   text-align: start;
@@ -37,7 +38,7 @@ body{
     justify-items: center;
     flex-direction: column;
     width: 550px;
-    height: 350vh;
+    height: 350px;
     background-color: blue;
 }
 #login p{
@@ -82,4 +83,5 @@ input{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     padding-left:10px;
+   
 }

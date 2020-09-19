@@ -35,8 +35,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 1s ease;
 }
-.square p{
+.square a{
     text-align: center;
     color: white;
+    transition: color 1s ease;
+    
+}
+.square:hover{
+    background-color: white;
+}
+.square:hover a{
+    color: black;
 }

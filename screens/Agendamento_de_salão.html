@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <link href="/styles/stylegeneral.css" rel="stylesheet">
+    <link href="/styles/hall.css" rel="stylesheet">
     <title> Visão Geral</title>
 </head>
 <body>
     <div id="top">
-        <p>Logo</p>
-        <p><a href="/screens/genereal.html">Voltar</a></p>
+        <p  style="text-decoration: none; float: left;  padding-left: 20px;
+        padding-top: 12px;">Logo</p>
+        <a style="text-decoration: none; float: right;  padding-right: 20px;
+            padding-top: 12px;" href="/screens/genereal.html">Voltar</a></p>
     </div>
     <div id="container">
         <div id="center">
-           
+           <p>Entrada</p>
+                <label for="dataIn">Data</label>
+                <input value="2020-01-01" id="dataIn" type="date">
+                <br>
+                <label for="timeIn">Horario</label>
+                <input  value="00:00" id="timeIn" type="time">
+           <p>Saida</p>
+                <label for="dateOut">Data</label>
+                <input value="2020-01-01" id="dateOut" type="date">
+                <br>
+                <label for="timeOut">Horario</label>
+                <input value="00:00" id="timeOut" type="time">
+            <br> 
+            <button type="submit"> Marcar Horario</button>
         </div>   
     </div>
 </body>

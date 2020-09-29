@@ -40,6 +40,7 @@
 a{
     color: white;
     text-align: center;
+    
 }
 .square a{
     text-align: center;
@@ -52,4 +53,11 @@ a{
 }
 a:hover{
     color: black;
+}
+
+p{
+    color: white;
+    float: left;
+    padding-left: 20px;
+    padding-top: 12px
 }

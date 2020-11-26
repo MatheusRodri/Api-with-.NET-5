@@ -5,21 +5,21 @@
 #top{
     width: 100%;
     height: 50px;
-    background-color: brown;
+    background-color    );
 }
 
 #container{
     width: 100%;
-    height: 93.4vh;
-    background-color: rgb(197, 156, 79);
+    height: 92.4vh;
+    background-color:#90822f;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #center{
     width: 500px;
-    height: 500px;
-    background-color: white;
+    height: 530px;
+    background-color:rgb(22, 22, 22);
     text-align: center;
 }
 .text{
@@ -27,22 +27,33 @@
     margin-top: 5px;
     font-family: 'Roboto', sans-serif;
 }
-label, input{
-    display: inline;
+input{
+    display: inline-block;
     margin: 5px;
     font-size: 25px;
 }
 label{
     font-family: 'Roboto', sans-serif ;
+    display: block;
+    font-size: 20px;
+   
+}
+label, p{
+    color: white;
 }
 button{
     width: 250px;
     height: 50px;
-    margin-top: 70px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     border-color: black;
     border-width: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
+}
+
+.tamanho{
+    height: 40px;
+    width: 250px;
 }

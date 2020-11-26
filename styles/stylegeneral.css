@@ -5,14 +5,14 @@
 #top{
     width: 100%;
     height: 50px;
-    background-color: blue;
+    background-color: rgb(92, 67, 28);
 }
 #container{
     width: 100vw;
     height: 92vh;
     display: flex;
     flex-direction: row;
-    background-color: yellow;
+    background-color: #90822f;
     justify-content: center;
     align-items: center;
 }
@@ -24,21 +24,21 @@
     height: 420px;
     width: 800px;
     flex-wrap: wrap;
-    background-color: brown;
+    background-color: rgb(92, 67, 28);
     
 }
 .square{
     width: 155px;
     height: 155px;
-    background-color: black;
+    background-color:rgb(54, 39, 15);
     margin: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 1s ease;
 }
 a{
     color: white;
+    font-weight: bold;
     text-align: center;
     
 }
@@ -47,12 +47,6 @@ a{
     color: white;
     transition: color 3s ease;
     
-}
-.square:hover{
-    background-color: white;
-}
-a:hover{
-    color: black;
 }
 
 p{

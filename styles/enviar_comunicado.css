@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#topo{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(92, 67, 28);
+    color: white;
+    text-align: center;
+    position: fixed;
+}
+#topo h1{
+    transform: translateY(50%);
+}
+
+#container{
+    background-color:#90822f;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#center{
+    background-color: white;
+    position: relative;
+    margin-top: 90px;
+    width: 800px;
+    height: 500px;
+}

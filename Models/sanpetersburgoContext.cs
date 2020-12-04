@@ -36,13 +36,10 @@ namespace sanPetersburgo.Models
         {
             modelBuilder.Entity<TbAcademium>(entity =>
             {
-                entity.HasKey(e => e.IdSalao)
-                    .HasName("PRIMARY");
-
-                entity.Property(e => e.IdSalao).ValueGeneratedNever();
+                entity.Property(e => e.IdAcademia).ValueGeneratedOnAdd();
 
                 entity.HasOne(d => d.IdMoradorNavigation)
-                    .WithMany(p => p.TbAcademia)
+                    .WithMany()
                     .HasForeignKey(d => d.IdMorador)
                     .HasConstraintName("id_morador");
             });
@@ -51,8 +48,6 @@ namespace sanPetersburgo.Models
             {
                 entity.HasKey(e => e.IdComunicado)
                     .HasName("PRIMARY");
-
-                entity.Property(e => e.IdComunicado).ValueGeneratedNever();
 
                 entity.Property(e => e.TxComunicado)
                     .HasCharSet("utf8")
@@ -69,9 +64,15 @@ namespace sanPetersburgo.Models
                 entity.HasKey(e => e.IdMorador)
                     .HasName("PRIMARY");
 
-                entity.Property(e => e.IdMorador).ValueGeneratedNever();
+                entity.Property(e => e.Email)
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.NmMorador)
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Senha)
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
             });
@@ -80,8 +81,6 @@ namespace sanPetersburgo.Models
             {
                 entity.HasKey(e => e.IdSalao)
                     .HasName("PRIMARY");
-
-                entity.Property(e => e.IdSalao).ValueGeneratedNever();
 
                 entity.HasOne(d => d.IdMoradorNavigation)
                     .WithMany(p => p.TbSalaos)

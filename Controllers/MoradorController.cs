@@ -28,5 +28,33 @@ namespace sanPetersburgo.Controllers
 
           return moradores;
         }
+
+        [HttpPut]
+        public void Alterar(Models.TbMorador morador){
+            Models.sanpetersburgoContext ctx = new Models.sanpetersburgoContext();
+            
+            Models.TbMorador atual =  ctx.TbMoradors.First(x=> x.IdMorador == morador.IdMorador);
+            atual.NmMorador = morador.NmMorador;
+            atual.AptoMorador = morador.AptoMorador;
+            atual.BlMorador = morador.BlMorador;
+            atual.Email = morador.Email;
+            atual.Senha = morador.Senha;
+            atual.Morador = morador.Morador;
+            atual.Sindico = morador.Sindico;
+            atual.Porteiro = morador.Porteiro;
+
+            ctx.SaveChanges();
+        }
+
+
+        [HttpDelete]
+        public void Remover(Models.TbMorador morador){
+            Models.sanpetersburgoContext ctx = new Models.sanpetersburgoContext();
+            Models.TbMorador atual =  ctx.TbMoradors.First(x=> x.IdMorador == morador.IdMorador);
+
+            ctx.TbMoradors.Remove(atual);
+
+            ctx.SaveChanges();
+        }
     }
 }

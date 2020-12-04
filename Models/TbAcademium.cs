@@ -8,13 +8,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace sanPetersburgo.Models
 {
+    [Keyless]
     [Table("tb_academia")]
+    [Index(nameof(IdAcademia), Name = "id_academia")]
     [Index(nameof(IdMorador), Name = "id_morador_idx")]
     public partial class TbAcademium
     {
-        [Key]
-        [Column("id_salao")]
-        public int IdSalao { get; set; }
+        [Column("id_academia")]
+        public int IdAcademia { get; set; }
         [Column("id_morador")]
         public int? IdMorador { get; set; }
         [Column("dt_entrada", TypeName = "date")]
@@ -27,7 +28,6 @@ namespace sanPetersburgo.Models
         public TimeSpan? TmSaida { get; set; }
 
         [ForeignKey(nameof(IdMorador))]
-        [InverseProperty(nameof(TbMorador.TbAcademia))]
         public virtual TbMorador IdMoradorNavigation { get; set; }
     }
 }

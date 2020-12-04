@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
+#nullable disable
+
 namespace sanPetersburgo.Models
 {
     [Table("tb_morador")]
@@ -11,7 +13,6 @@ namespace sanPetersburgo.Models
     {
         public TbMorador()
         {
-            TbAcademia = new HashSet<TbAcademium>();
             TbComunicados = new HashSet<TbComunicado>();
             TbSalaos = new HashSet<TbSalao>();
         }
@@ -19,13 +20,17 @@ namespace sanPetersburgo.Models
         [Key]
         [Column("id_morador")]
         public int IdMorador { get; set; }
-        [Required]
+        
         [Column("nm_morador", TypeName = "varchar(70)")]
         public string NmMorador { get; set; }
         [Column("apto_morador")]
         public int AptoMorador { get; set; }
         [Column("bl_morador")]
         public int BlMorador { get; set; }
+        [Column("email", TypeName = "varchar(65)")]
+        public string Email { get; set; }
+        [Column("senha", TypeName = "varchar(45)")]
+        public string Senha { get; set; }
         [Column("morador")]
         public bool? Morador { get; set; }
         [Column("sindico")]
@@ -33,8 +38,6 @@ namespace sanPetersburgo.Models
         [Column("porteiro")]
         public bool? Porteiro { get; set; }
 
-        [InverseProperty(nameof(TbAcademium.IdMoradorNavigation))]
-        public virtual ICollection<TbAcademium> TbAcademia { get; set; }
         [InverseProperty(nameof(TbComunicado.IdMoradorNavigation))]
         public virtual ICollection<TbComunicado> TbComunicados { get; set; }
         [InverseProperty(nameof(TbSalao.IdMoradorNavigation))]

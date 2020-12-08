@@ -18,6 +18,14 @@ namespace sanPetersburgo.Controllers
 
             return academia;
         }
+         [HttpGet]
+        public List<Models.TbAcademium> Listar(){
+            Models.sanpetersburgoContext ctx = new Models.sanpetersburgoContext();
+
+            List<Models.TbAcademium> academia = ctx.TbAcademium.ToList();
+
+                return academia;
+        }
         
     }
 }

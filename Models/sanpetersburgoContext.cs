@@ -28,7 +28,7 @@ namespace sanPetersburgo.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("server=127.0.0.1;user id=root;password=matheus250302;database=sanpetersburgo", Microsoft.EntityFrameworkCore.ServerVersion.FromString("8.0.22-mysql"));
+                optionsBuilder.UseMySql("server=localhost;user id=root;password=matheus250302;database=sanpetersburgo", Microsoft.EntityFrameworkCore.ServerVersion.FromString("8.0.22-mysql"));
             }
         }
 
@@ -36,10 +36,11 @@ namespace sanPetersburgo.Models
         {
             modelBuilder.Entity<TbAcademium>(entity =>
             {
-                entity.Property(e => e.IdAcademia).ValueGeneratedOnAdd();
+                entity.HasKey(e => e.IdAcademia)
+                    .HasName("PRIMARY");
 
                 entity.HasOne(d => d.IdMoradorNavigation)
-                    .WithMany()
+                    .WithMany(p => p.TbAcademia)
                     .HasForeignKey(d => d.IdMorador)
                     .HasConstraintName("id_morador");
             });

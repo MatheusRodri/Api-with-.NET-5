@@ -14,13 +14,9 @@ namespace sanPetersburgo.Models
         [Required]
         [Column("nm_morador", TypeName = "varchar(70)")]
         public string NmMorador { get; set; }
-        [Column("dt_entrada", TypeName = "date")]
+        [Column("dt_entrada", TypeName = "datetime")]
         public DateTime? DtEntrada { get; set; }
-        [Column("tm_entrada", TypeName = "time")]
-        public TimeSpan? TmEntrada { get; set; }
-        [Column("dt_saida", TypeName = "date")]
+        [Column("dt_saida", TypeName = "datetime")]
         public DateTime? DtSaida { get; set; }
-        [Column("tm_saida", TypeName = "time")]
-        public TimeSpan? TmSaida { get; set; }
     }
 }
